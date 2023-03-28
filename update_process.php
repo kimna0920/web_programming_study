@@ -1,13 +1,14 @@
 <?php
+   $num = $_POST['mynum'];
    $name = $_POST['myname'];
    $age = $_POST['myage'];
    $gender = $_POST['mygender'];
    $height = $_POST['myheight'];
 
    //MYSQL연결한다
-     $conn = mysqli_connect('localhost', 'root', '', 'test');
+     $conn = mysqli_connect('localhost', 'root', '','test');
     //데이터를 insert하는 SQL쿼리를 작성
-    $query = "insert into table1(name,age,gender,height) values('".$name."',".$age.",'".$gender."',".$height.");";
+    $query = "update table1 set name = '".$name."',age = ".$age.",gender = '".$gender."',height = ".$height." where num = ".$num.";";
     //SQL쿼리를 실행
     $result = mysqli_query($conn, $query);
     //실행결과 확인

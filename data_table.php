@@ -19,7 +19,8 @@
                     <td>$getHeight</td>
                     <td>$getDate</td>
                     <td>
-                        <a href=\"process_delete.php?id={$getName}\">삭제</a>    
+                        <a href=\"process_delete.php?id={$getDate}\">삭제</a>
+                        <a href=\"update.php?id={$getDate}\">수정</a>    
                     </td>
                 </tr>
         ";
@@ -51,6 +52,13 @@
                <a href="index.php">홈으로</a>
            </div>
         </div>
+        <form id = myform method=post action = process.php>
+            이름:<input id = txt1 type=text name = myname><br>
+            나이:<input id = txt2 type=text name=myage><br>
+            성별: <input type= text name=mygender><br>
+            키: <input type=text name=myheight><br>
+            <input type=button value=확인 onclick=mysubmit()>
+        </form>
     </div>
 </body>
 </html>
